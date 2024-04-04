@@ -8,6 +8,11 @@ const MessagePage = ({ message }: InferGetServerSidePropsType<typeof getServerSi
         <Head>
             <title>{message}</title>
             <meta name="description" content={message} />
+            <meta property="og:title" content={message} />
+            <meta property="twitter:title" content={message} />
+            <meta property="og:description" content={message} />
+            <meta property="twitter:description" content={message} />
+            <meta property="og:url" content={`https://example.com/${message}`} />
         </Head>
         <CldOgImage
             alt={message}
