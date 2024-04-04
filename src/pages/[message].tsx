@@ -1,9 +1,14 @@
 import {GetServerSideProps, InferGetServerSidePropsType} from "next";
+import Head from "next/head";
 import {CldImage, CldOgImage} from "next-cloudinary";
 
 const MessagePage = ({ message }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   return (
     <>
+        <Head>
+            <title>{message}</title>
+            <meta name="description" content={message} />
+        </Head>
         <CldOgImage
             alt={message}
             src="https://res.cloudinary.com/dmwcbhehi/image/upload/v1712223446/samples/man-portrait.jpg"

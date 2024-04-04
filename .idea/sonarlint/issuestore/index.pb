@@ -10,3 +10,7 @@ G
 :
 
 .env.local,1/f/1fa30fea3e9ae270a3c38a6113a3689d8987d108
+A
+public/robots.tsx,c/0/c0ec3a0d0be57bacfc45277ea0f6342c1860899e
+A
+public/robots.txt,d/a/dac799070c2d0c2fa24462b02c1f2dcc3fb3a1e9
