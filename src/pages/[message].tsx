@@ -8,15 +8,17 @@ const MessagePage = ({ message }: InferGetServerSidePropsType<typeof getServerSi
         <Head>
             <title>{message}</title>
             <meta name="description" content={message} />
-            <meta property="og:title" content={message} />
-            <meta property="twitter:title" content={message} />
-            <meta property="og:description" content={message} />
-            <meta property="twitter:description" content={message} />
-            <meta property="og:url" content={`https://example.com/${message}`} />
         </Head>
         <CldOgImage
+            twitterTitle={message}
             alt={message}
             src="https://res.cloudinary.com/dmwcbhehi/image/upload/v1712223446/samples/man-portrait.jpg"
+            keys={{
+                "og:title": message,
+                "og:description": message,
+                "twitter:description": message,
+                "og:url": `https://example.com/${message}`,
+            }}
             overlays={[
                 {
                     position: {
@@ -36,10 +38,15 @@ const MessagePage = ({ message }: InferGetServerSidePropsType<typeof getServerSi
             ]}
         />
         <CldImage
+            priority
             alt={message}
             src="https://res.cloudinary.com/dmwcbhehi/image/upload/v1712223446/samples/man-portrait.jpg"
             width={1333 / 2}
             height={2000 / 2}
+            style={{
+                width: "auto",
+                height: "auto",
+            }}
             overlays={[
                 {
                     position: {
